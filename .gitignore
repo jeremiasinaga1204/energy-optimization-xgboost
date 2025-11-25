@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (keep template only)
+data/processed/*
+data/results/*
+!data/processed/.gitkeep
+!data/results/.gitkeep
+
+# Outputs (generated files)
+outputs/figures/*.png
+outputs/figures/*.jpg
+outputs/tables/*.xlsx
+outputs/tables/*.csv
+!outputs/figures/.gitkeep
+!outputs/tables/.gitkeep
+
+# Models
+*.pkl
+*.joblib
+models/
+
+# Temporary
+*.tmp
+*.bak
+~$*
