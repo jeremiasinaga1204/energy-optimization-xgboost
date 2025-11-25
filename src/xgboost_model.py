@@ -22,8 +22,9 @@ from typing import Optional, Dict, Any, Tuple, List
 from datetime import datetime, timedelta
 import warnings
 
-# Suppress warnings
-warnings.filterwarnings('ignore')
+# Suppress specific XGBoost and sklearn warnings that are not actionable
+warnings.filterwarnings('ignore', category=FutureWarning, module='xgboost')
+warnings.filterwarnings('ignore', category=UserWarning, module='xgboost')
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score

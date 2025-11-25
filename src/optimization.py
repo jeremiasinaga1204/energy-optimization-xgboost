@@ -362,7 +362,7 @@ def calculate_total_savings(recommendations_df: pd.DataFrame) -> Dict[str, Any]:
         'total_implementation_cost_rp': round(total_cost, 0),
         'overall_savings_percentage': round(total_savings_kwh / total_current_kwh * 100, 2) if total_current_kwh > 0 else 0,
         'average_roi_months': round(total_cost / total_savings_rp, 1) if total_savings_rp > 0 else 0,
-        'co2_reduction_kg_annual': round(total_savings_kwh * 12 * 0.85, 2)  # ~0.85 kg CO2 per kWh in Indonesia
+        'co2_reduction_kg_annual': round(total_savings_kwh * 12 * config.CO2_EMISSION_FACTOR, 2)
     }
     
     logger.info(f"Total potential annual savings: Rp {totals['potential_annual_savings_rp']:,.0f}")

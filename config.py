@@ -45,6 +45,12 @@ SIMULATION_DAYS = 90
 MONTHS_PER_YEAR = 12
 
 # =============================================================================
+# ENVIRONMENTAL FACTORS
+# =============================================================================
+# CO2 emission factor (kg CO2 per kWh) - Indonesia grid average
+CO2_EMISSION_FACTOR = 0.85
+
+# =============================================================================
 # MODEL CONFIGURATION
 # =============================================================================
 # Test set size ratio for train-test split

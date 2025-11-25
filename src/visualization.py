@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 from typing import Optional, Tuple, List, Any
+from sklearn.metrics import r2_score
 
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -261,7 +262,6 @@ def plot_prediction_vs_actual(y_actual: np.ndarray,
     ax.plot([min_val, max_val], [min_val, max_val], 'r--', lw=2, label='Perfect Prediction')
     
     # Calculate R²
-    from sklearn.metrics import r2_score
     r2 = r2_score(y_actual, y_predicted)
     
     # Add R² annotation
